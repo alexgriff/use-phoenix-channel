@@ -1,0 +1,38 @@
+{
+  "name": "use-phoenix-channel",
+  "version": "1.0.0",
+  "description": "use phoenix channels implemented with react hooks",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "phoenix",
+    "websockets",
+    "channels"
+  ],
+  "author": "alexgriff",
+  "license": "MIT",
+  "dependencies": {
+    "phoenix": "^1.4.0",
+    "react": "^16.7.0-alpha.0",
+    "webpack": "^4.25.1"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0-alpha.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "prop-types": "^15.6.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
