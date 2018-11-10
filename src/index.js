@@ -1,7 +1,7 @@
 import SocketProvider from './components/SocketProvider'
-import usePhoenixChannel from './hooks/usePhoenixChannel'
+import useChannel from './hooks/useChannel'
 
 export {
   SocketProvider,
-  usePhoenixChannel
+  useChannel
 }

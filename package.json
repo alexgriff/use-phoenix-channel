@@ -1,12 +1,16 @@
 {
   "name": "use-phoenix-channel",
   "version": "1.0.0",
-  "description": "use phoenix channels implemented with react hooks",
+  "description": "Use Phoenix channels in a React app implemented with Hooks",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/alexgriff/use-phoenix-channels.git"
   },
   "keywords": [
     "react",
@@ -15,8 +19,11 @@
     "websockets",
     "channels"
   ],
-  "author": "alexgriff",
-  "license": "MIT",
+  "author": {
+    "name": "Alex Griffith",
+    "url": "http://github.com/alexgriff"
+  },
+  "license": "ISC",
   "dependencies": {
     "phoenix": "^1.4.0",
     "react": "^16.7.0-alpha.0",
