@@ -5,7 +5,7 @@ A React hook that allows for responding to and broadcasting messages over [Phoen
 yarn add use-phoenix-channel
 ```
 
-There are two main pieces to the libray. the `SocketProvider` Component and the `useChannel` hook.
+There are two main pieces to the libray, the `SocketProvider` Component and the `useChannel` hook.
 
 ## `SocketProvider` Component
 
