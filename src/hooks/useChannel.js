@@ -29,6 +29,7 @@ const joinChannel = (socket, channelTopic, dispatch, setBroadcast) => {
   setBroadcast(() => channel.push.bind(channel))
 }
 
-const mustJoinChannelWarning = () => console.error(`useChannel broadcast function cannot be invoked before the channel has been joined`)
-
+const mustJoinChannelWarning = () => (
+  () => console.error(`useChannel broadcast function cannot be invoked before the channel has been joined`)
+)
 export default useChannel
