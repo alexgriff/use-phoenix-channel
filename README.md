@@ -1,7 +1,11 @@
 # use-phoenix-channel
 A React hook that allows for responding to and broadcasting messages over [Phoenix](https://github.com/phoenixframework/phoenix#readme) channels.
 
+See the ["Improving UX with Phoenix Channels & React Hooks"](https://medium.com/flatiron-labs/improving-ux-with-phoenix-channels-react-hooks-8e661d3a771e) Blogpost for an example use case.
+
 ```
+npm install use-phoenix-channel
+// or
 yarn add use-phoenix-channel
 ```
 
@@ -61,7 +65,7 @@ const countReducer = (state, {event, payload}) => {
 const initialState = 0
 
 const MyComponent = (props) => {
-  const [{ count }, broadcast] = useChannel(channelName, reducer, initialState)
+  const [{ count }, broadcast] = useChannel(channelName, countReducer, initialState)
 
   return (
     <div>
