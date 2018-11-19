@@ -1,6 +1,6 @@
 {
   "name": "use-phoenix-channel",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Use Phoenix channels in a React app implemented with Hooks",
   "main": "build/index.js",
   "scripts": {
