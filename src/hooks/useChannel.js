@@ -16,13 +16,10 @@ const useChannel = (channelTopic, reducer, initialState) => {
 const joinChannel = (socket, channelTopic, dispatch, setBroadcast) => {
   const channel = socket.channel(channelTopic, {client: 'browser'})
 
-  const handleMessage = ({ event, topic, payload }) => {
-    if (topic === channelTopic) {
-      dispatch({ event, payload })
-    }
+  channel.onMessage = (event, payload) => {
+    dispatch({ event, payload })
+    return payload
   }
-
-  socket.onMessage(handleMessage)
 
   channel.join()
     .receive("ok", ({messages}) =>  console.log('successfully joined channel', messages || ''))
@@ -31,7 +28,6 @@ const joinChannel = (socket, channelTopic, dispatch, setBroadcast) => {
   setBroadcast(() => channel.push.bind(channel))
 
   return () => {
-    socket.stateChangeCallbacks.message = socket.stateChangeCallbacks.message.filter(cb => cb !== handleMessage)
     channel.leave()
   }
 }
