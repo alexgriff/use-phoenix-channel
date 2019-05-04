@@ -20,7 +20,7 @@ import { SocketProvider } from 'use-phoenix-channel'
 
 const Root = (props) => {
  return (
-   <SocketProvider wsUrl='localhost:4000/socket', options={{ token }}>
+   <SocketProvider wsUrl='/socket' options={{ token }}>
      <App />
    </SocketProvider>
   )
@@ -28,6 +28,8 @@ const Root = (props) => {
 
 export default Root
 ```
+
+The `options` prop is simply passed along as `params` to the underlying Phoenix `Socket` constructor.
 
 ## `useChannel` Hook
 
